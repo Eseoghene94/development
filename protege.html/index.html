@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protege School - Nurturing Future Leaders</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <i class="fas fa-graduation-cap"></i>
+          Protege School
+        </div>
+        <div class="nav-toggle">
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+          <li>
+            <a href="#programs"><i class="fas fa-book"></i> Programs</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h1>Welcome to Protege School</h1>
+        <p>Nurturing minds, Building futures</p>
+      </section>
+
+      <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+          <p>
+            At Protege School, we believe in providing excellence in education
+            from primary through secondary levels. Our dedicated educators and
+            modern facilities ensure your child receives the best possible
+            education.
+          </p>
+        </div>
+      </section>
+
+      <section id="programs">
+        <h2>Our Programs</h2>
+        <div class="programs-grid">
+          <div class="program-card">
+            <h3><i class="fas fa-child"></i> Primary Education</h3>
+            <p>Grades 1-6</p>
+            <ul>
+              <li>Foundation in core subjects</li>
+              <li>Creative arts and music</li>
+              <li>Physical education</li>
+            </ul>
+          </div>
+          <div class="program-card">
+            <h3><i class="fas fa-user-graduate"></i> Secondary Education</h3>
+            <p>Grades 7-12</p>
+            <ul>
+              <li>Advanced academics</li>
+              <li>Science and technology</li>
+              <li>College preparation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <h2>Why Choose Us</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <i
+              class="fas fa-chalkboard-teacher fa-3x mb-4"
+              style="color: var(--primary-color)"
+            ></i>
+            <h3>Experienced Teachers</h3>
+            <p>Learn from the best educators in the field</p>
+          </div>
+          <div class="feature">
+            <i
+              class="fas fa-laptop-code fa-3x mb-4"
+              style="color: var(--primary-color)"
+            ></i>
+            <h3>Modern Facilities</h3>
+            <p>State-of-the-art classrooms and laboratories</p>
+          </div>
+          <div class="feature">
+            <i
+              class="fas fa-brain fa-3x mb-4"
+              style="color: var(--primary-color)"
+            ></i>
+            <h3>Holistic Development</h3>
+            <p>Focus on academic and personal growth</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 123 Education Street, Learning
+            City
+          </p>
+          <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@protege.school</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#primary">Primary Education</a></li>
+            <li><a href="#secondary">Secondary Education</a></li>
+            <li><a href="#activities">Extra-curricular Activities</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Protege School. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.getElementById("theme-toggle");
+      const html = document.documentElement;
+      const themeIcon = themeToggle.querySelector("i");
+
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = html.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", newTheme);
+        themeIcon.className =
+          newTheme === "light" ? "fas fa-moon" : "fas fa-sun";
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
